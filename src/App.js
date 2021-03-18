@@ -9,6 +9,13 @@ function App() {
   return (
     <div className="App">
       <h1>Projects by Autumn</h1>
+      <p>
+        Hello! This is a website where I keep links to all my most interesting
+        projects. As you can see, my eye for design is underdeveloped, but if
+        you take a dive into my source code, you&aposll find that my code logic
+        and organization is much better.
+      </p>
+      <a href="">source here.</a>
       <Card
         title="Bullet Hell JS"
         copy="A bullet hell shooter written in pure Javascript."
