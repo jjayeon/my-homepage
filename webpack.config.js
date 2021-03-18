@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -22,6 +24,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.png$/,
+        loader: "file-loader",
       },
     ],
   },

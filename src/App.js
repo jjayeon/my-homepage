@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 
 import "./App.css";
 
+import bulletimgurl from "./assets/bullet hell js.png";
+import uncrossimgurl from "./assets/uncross the lines.png";
+
 function App() {
   return (
     <div className="App">
@@ -22,52 +25,58 @@ function App() {
       >
         See source on Github
       </a>
-      <Card
-        title="Bullet Hell JS"
-        copy="A bullet hell shooter written in pure Javascript."
-        liveurl="https://bullet-hell-js.netlify.app/"
-        giturl="https://github.com/jjayeon/bullet-hell-js"
-      />
-      <Card
-        title="Uncross the Lines"
-        copy='A unique implementation of the "uncross the lines" puzzle game, where you can group and move around multiple dots at once.'
-        liveurl="https://uncrossthelines.netlify.app/"
-        giturl="https://github.com/jjayeon/uncross-the-lines"
-      />
-      <Card
-        title="Input.js"
-        copy="A simple Javascript library for handling mouse and keyboard input in a granular, user-agnostic way."
-        giturl="https://github.com/jjayeon/inputjs"
-      />
-      <Card
-        title="Static Site Generator"
-        copy="A simple static site generator, good for rendering plain text with simple CSS backgrounds."
-        giturl="https://github.com/jjayeon/static-site-generator"
-      />
+      <div className="Cards">
+        <Card
+          title="Bullet Hell JS"
+          copy="A bullet hell shooter written in pure Javascript."
+          img={bulletimgurl}
+          liveurl="https://bullet-hell-js.netlify.app/"
+          giturl="https://github.com/jjayeon/bullet-hell-js"
+        />
+        <Card
+          title="Uncross the Lines"
+          copy='A unique implementation of the "uncross the lines" puzzle game, where you can group and move around multiple dots at once.'
+          img={uncrossimgurl}
+          liveurl="https://uncrossthelines.netlify.app/"
+          giturl="https://github.com/jjayeon/uncross-the-lines"
+        />
+        <Card
+          title="Input.js"
+          copy="A simple Javascript library for handling mouse and keyboard input in a granular, user-agnostic way."
+          giturl="https://github.com/jjayeon/inputjs"
+        />
+        <Card
+          title="Static Site Generator"
+          copy="A simple static site generator, good for rendering plain text with simple CSS backgrounds."
+          giturl="https://github.com/jjayeon/static-site-generator"
+        />
+      </div>
     </div>
   );
 }
 
 function Card(props) {
-  let livelink, gitlink;
-
-  if (props.liveurl) {
-    livelink = (
-      <a href={props.liveurl} target="_blank" rel="noreferrer noopener">
-        Try it out
-      </a>
-    );
-  }
-  gitlink = (
-    <a href={props.giturl} target="_blank" rel="noreferrer noopener">
-      See source on Github
-    </a>
-  );
-
   return (
     <div className="Card">
       <h2>{props.title}</h2>
-      {livelink} | {gitlink}
+      {props.img && (
+        <a href={props.liveurl} target="_blank" rel="noreferrer noopener">
+          <img src={props.img} alt="imagine picture here" />
+        </a>
+      )}
+      <p>
+        {props.liveurl && (
+          <a href={props.liveurl} target="_blank" rel="noreferrer noopener">
+            Try it out
+          </a>
+        )}
+        {props.liveurl && " | "}
+        {props.giturl && (
+          <a href={props.giturl} target="_blank" rel="noreferrer noopener">
+            See source on Github
+          </a>
+        )}
+      </p>
       <p>{props.copy}</p>
     </div>
   );
@@ -75,6 +84,7 @@ function Card(props) {
 Card.propTypes = {
   title: PropTypes.string,
   copy: PropTypes.string,
+  img: PropTypes.string,
   liveurl: PropTypes.string,
   giturl: PropTypes.string,
 };
