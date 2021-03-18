@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <h1>Projects by Autumn</h1>
-            <p>
+            <p id="maincopy">
                 Hello! This is a website where I keep links to all my most
                 interesting projects. As you can see, my eye for design is
                 underdeveloped, but if you take a dive into my source code,
