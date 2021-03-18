@@ -22,4 +22,4 @@ Babel for Javascript wrangling.
 
 ESLint and Prettier for code formatting.
 
-Mocha for unit tests.
+React.
