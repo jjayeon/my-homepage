@@ -1,33 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
 body {
-    background-image: linear-gradient(
-        to bottom right,
-        white,
-        white,
-        white,
-        #aff,
-        #aff
-    );
+    /* background-image: linear-gradient( */
+    /*     to bottom right, */
+    /*     white, */
+    /*     white, */
+    /*     white, */
+    /*     #aff, */
+    /*     #aff */
+    /* ); */
+    background-color: #dff;
     background-attachment: fixed;
+    color: #000;
     font-family: "Verdana", "Arial", sans-serif;
     font-size: x-large;
 }
 
 h1 {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Inconsolata", mono;
 }
+
 h2 {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Varela Round", mono;
 }
 
 .Card {
+    background-color: #cff;
     margin: 15px;
-    padding-left: 10px;
+    padding-left: 25px;
     border: 1px solid grey;
     border-radius: 20px;
+}
+
+a:link,
+a:visited {
+    color: #900;
+}
+
+a:hover {
+    color: #987;
 }
 
 img {
