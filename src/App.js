@@ -12,10 +12,16 @@ function App() {
       <p>
         Hello! This is a website where I keep links to all my most interesting
         projects. As you can see, my eye for design is underdeveloped, but if
-        you take a dive into my source code, you&aposll find that my code logic
+        you take a dive into my source code, you&apos;ll find that my code logic
         and organization is much better.
       </p>
-      <a href="">source here.</a>
+      <a
+        href="https://github.com/jjayeon/my-homepage"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        source here.
+      </a>
       <Card
         title="Bullet Hell JS"
         copy="A bullet hell shooter written in pure Javascript."
@@ -24,7 +30,7 @@ function App() {
       />
       <Card
         title="Uncross the Lines"
-        copy="A unique implementation of the 'uncross the lines' puzzle game, where you can group and move around multiple dots at once."
+        copy='A unique implementation of the "uncross the lines" puzzle game, where you can group and move around multiple dots at once.'
         liveurl="https://uncrossthelines.netlify.app/"
         giturl="https://github.com/jjayeon/uncross-the-lines"
       />
