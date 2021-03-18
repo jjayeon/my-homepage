@@ -20,7 +20,7 @@ function App() {
         target="_blank"
         rel="noreferrer noopener"
       >
-        source here.
+        See source on Github
       </a>
       <Card
         title="Bullet Hell JS"
