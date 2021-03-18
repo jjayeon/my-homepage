@@ -3,6 +3,7 @@
 body {
   background-color: #aff;
   font-family: "Varela Round", sans-serif;
+  font-size: x-large;
 }
 
 img {
@@ -16,6 +17,9 @@ img:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    font-size: large;
+  }
   p {
     max-width: 70%;
   }
