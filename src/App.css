@@ -3,7 +3,7 @@
 body {
   background-color: #aff;
   font-family: "Varela Round", sans-serif;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 img {
@@ -16,7 +16,7 @@ img:hover {
   opacity: 1;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 720px) {
   body {
     font-size: large;
   }
