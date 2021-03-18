@@ -1,58 +1,69 @@
-"use strict";
+/* eslint-disable no-unused-vars */
 
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import "./App.css";
 
-class App extends Component {
-  /*  
-function makeLink(title, copy, liveurl, giturl) {
-  let out = document.createElement("div");
-
-  let livelink = document.createElement("a");
-
-  livelink.href = liveurl;
-  livelink.target = "_blank";
-  livelink.rel = "noopener noreferrer";
-  livelink.innerHTML = title;
-
-  let copyp = document.createElement("p");
-  copyp.innerHTML = copy;
-
-  let gitlink = document.createElement("a");
-  gitlink.href = giturl;
-  gitlink.target = "_blank";
-  gitlink.rel = "noopener noreferrer";
-  gitlink.innerHTML = "See source on Github";
-
-  let hr = document.createElement("hr");
-
-  out.appendChild(livelink);
-  out.appendChild(copyp);
-  out.appendChild(gitlink);
-  out.appendChild(hr);
-
-  return out;
+function App() {
+  return (
+    <div className="App">
+      <h1>Projects by Autumn</h1>
+      <Card
+        title="Bullet Hell JS"
+        copy="A bullet hell shooter written in pure Javascript."
+        liveurl="https://bullet-hell-js.netlify.app/"
+        giturl="https://github.com/jjayeon/bullet-hell-js"
+      />
+      <Card
+        title="Uncross the Lines"
+        copy="A unique implementation of the 'uncross the lines' puzzle game, where you can group and move around multiple dots at once."
+        liveurl="https://uncrossthelines.netlify.app/"
+        giturl="https://github.com/jjayeon/uncross-the-lines"
+      />
+      <Card
+        title="Input.js"
+        copy="A simple Javascript library for handling mouse and keyboard input in a granular, user-agnostic way."
+        giturl="https://github.com/jjayeon/inputjs"
+      />
+      <Card
+        title="Static Site Generator"
+        copy="A simple static site generator, good for rendering plain text with simple CSS backgrounds."
+        giturl="https://github.com/jjayeon/static-site-generator"
+      />
+    </div>
+  );
 }
 
-app.appendChild(
-  makeLink(
-    "Bullet Hell JS",
-    "game",
-    "https://bullet-hell-js.netlify.app/",
-    "https://github.com/jjayeon/bullet-hell-js"
-  )
-);
+function Card(props) {
+  let livelink, gitlink;
 
-let link2 = <a href="https://github.com/jjayeon/uncross-the-lines">lonk</a>;
-*/
-  render() {
-    return null;
+  if (props.liveurl) {
+    livelink = (
+      <a href={props.liveurl} target="_blank" rel="noreferrer noopener">
+        Try it out
+      </a>
+    );
   }
-}
+  gitlink = (
+    <a href={props.giturl} target="_blank" rel="noreferrer noopener">
+      See source on Github
+    </a>
+  );
 
-function Card(title, copy, liveurl, giturl) {
-  return null;
+  return (
+    <div className="Card">
+      <h2>{props.title}</h2>
+      {livelink} | {gitlink}
+      <p>{props.copy}</p>
+    </div>
+  );
 }
+Card.propTypes = {
+  title: PropTypes.string,
+  copy: PropTypes.string,
+  liveurl: PropTypes.string,
+  giturl: PropTypes.string,
+};
 
 export default App;
