@@ -15,6 +15,10 @@ function App() {
         you take a dive into my source code, you&apos;ll find that my code logic
         and organization is much better.
       </p>
+      <p>
+        NOTE: if you can read this, it means that Netlify tracking is set up
+        wrong. bad
+      </p>
       <a
         href="https://github.com/jjayeon/my-homepage"
         target="_blank"
