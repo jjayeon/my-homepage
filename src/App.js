@@ -5,6 +5,7 @@ import "./App.css";
 
 import bulletimgurl from "./assets/bullet hell js.png";
 import uncrossimgurl from "./assets/uncross the lines.png";
+import koreanimgurl from "./assets/korean number practice.png";
 
 function App() {
     return (
@@ -42,6 +43,7 @@ function App() {
                 <Card
                     title="Korean Number Practice"
                     copy="An app for practicing reading Korean numbers quickly and adding them together."
+                    img={koreanimgurl}
                     liveurl="https://korean-number-practice.netlify.app"
                     giturl="https://github.com/jjayeon/korean-number-practice-2"
                 />
