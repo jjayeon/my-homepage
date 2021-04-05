@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import "./App.css";
@@ -40,6 +38,12 @@ function App() {
                     img={uncrossimgurl}
                     liveurl="https://uncrossthelines.netlify.app/"
                     giturl="https://github.com/jjayeon/uncross-the-lines"
+                />
+                <Card
+                    title="Korean Number Practice"
+                    copy="An app for practicing reading Korean numbers quickly and adding them together."
+                    liveurl="https://korean-number-practice.netlify.app"
+                    giturl="https://github.com/jjayeon/korean-number-practice-2"
                 />
                 <Card
                     title="Input.js"
