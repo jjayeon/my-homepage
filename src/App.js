@@ -50,6 +50,7 @@ function App() {
                 <Card
                     title="Input.js"
                     copy="A simple Javascript library for handling mouse and keyboard input in a granular, user-agnostic way."
+                    liveurl="https://input-js.netlify.app"
                     giturl="https://github.com/jjayeon/inputjs"
                 />
                 <Card
